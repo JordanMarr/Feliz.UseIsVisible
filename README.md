@@ -141,7 +141,7 @@ let Page (company: Company) =
     )
 
     let export() = 
-        printfn "Exporting...
+        printfn "Exporting..."
 
     Ctrls.container [
         h4 [] [str "Hours Worked"]
