@@ -129,12 +129,12 @@ let Page (company: Company) =
         [|
             for n in [1 .. 5000] do
                 {
-                    Monthly.EntryView.Date = DateTime.Today
-                    Monthly.EntryView.Email = "person@email.com"
-                    Monthly.EntryView.Hours = 8
-                    Monthly.EntryView.Project = $"Project %i{n}"
-                    Monthly.EntryView.Task = $"Task %i{n}"
-                    Monthly.EntryView.Username = $"User %i{n}"
+                    EntryView.Date = DateTime.Today
+                    EntryView.Email = "person@email.com"
+                    EntryView.Hours = 8
+                    EntryView.Project = $"Project %i{n}"
+                    EntryView.Task = $"Task %i{n}"
+                    EntryView.Username = $"User %i{n}"
                 }
         |]
         |> setEntries
