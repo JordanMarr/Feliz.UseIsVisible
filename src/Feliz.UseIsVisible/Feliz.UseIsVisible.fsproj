@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<Version>1.0.0-beta1</Version>
+		<Version>1.0.0</Version>
 		<Authors>Jordan Marr</Authors>
 		<RepositoryUrl>https://github.com/JordanMarr/Feliz.UseIsVisible</RepositoryUrl>
 		<Description>A Fable.React hook that determines whether a component is currently visible on the screen.</Description>
