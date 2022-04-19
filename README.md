@@ -29,7 +29,7 @@ open Feliz.UseIsVisible
 [<ReactComponent>]
 let Row (entry: Monthly.EntryView) = 
     let rowRef = React.useElementRef()
-    let isVisible = React.useIsVisible(rowRef, 400, [||])
+    let isVisible = React.useIsVisible(rowRef, margin = 400, dependencies = [||])
 
     if isVisible then
         Html.tr [
@@ -67,7 +67,7 @@ let Row (entry: Monthly.EntryView) =
 [<ReactComponent>]
 let Row (entry: Monthly.EntryView) = 
     let rowRef = React.useElementRef()
-    let isVisible = React.useIsVisible(rowRef, 200, [||])
+    let isVisible = React.useIsVisible(rowRef, margin = 400, dependencies = [||])
 
     if isVisible then
         tr [ Ref (adaptFelizUseElementRef rowRef) ] [
