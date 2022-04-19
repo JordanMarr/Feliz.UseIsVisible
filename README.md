@@ -20,6 +20,7 @@ In this example, 5000 rows are displayed, and the (vertical) margin is set to `4
 This approach requires that your dynamically rendered row be broken out into its own component that utilizes the `useIsVisible` hook:
 
 ```F#
+open Feliz
 open Feliz.UseIsVisible
 ```
 
@@ -176,3 +177,7 @@ let Page (company: Company) =
     ]
 
 ```
+
+## Optional Parameters
+* `margin` allows you to specify a margin (in pixels) above and below the visible screen that will extend the "visible" region.
+* `dependencies` allows you to pass in an `obj[]` of dependencies that will trigger `useIsVisible` to refresh if any of the dependency values change.
