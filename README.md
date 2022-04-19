@@ -1,6 +1,12 @@
 # Feliz.UseIsVisible
 A Fable.React hook that determines whether a component is currently visible on the screen.
 
+## Installation
+Get it from NuGet!
+
+[![NuGet version (Feliz.UseIsVisible)](https://img.shields.io/nuget/v/Feliz.UseIsVisible.svg?style=flat-square)](https://www.nuget.org/packages/Feliz.UseIsVisible/)
+
+## Usage
 This hook is useful when you need to display a large amount and you only want to render rows that are visible on the screen for performance reasons.
 
 ## Example
