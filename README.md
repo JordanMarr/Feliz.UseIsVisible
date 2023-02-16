@@ -20,6 +20,7 @@ In this example, 5000 rows are displayed, and the (vertical) margin is set to `4
 This approach requires that your dynamically rendered row be broken out into its own component that utilizes the `useIsVisible` hook:
 
 ```F#
+open Feliz
 open Feliz.UseIsVisible
 ```
 
@@ -128,19 +129,19 @@ let Page (company: Company) =
         [|
             for n in [1 .. 5000] do
                 {
-                    Monthly.EntryView.Date = DateTime.Today
-                    Monthly.EntryView.Email = "person@email.com"
-                    Monthly.EntryView.Hours = 8
-                    Monthly.EntryView.Project = $"Project %i{n}"
-                    Monthly.EntryView.Task = $"Task %i{n}"
-                    Monthly.EntryView.Username = $"User %i{n}"
+                    EntryView.Date = DateTime.Today
+                    EntryView.Email = "person@email.com"
+                    EntryView.Hours = 8
+                    EntryView.Project = $"Project %i{n}"
+                    EntryView.Task = $"Task %i{n}"
+                    EntryView.Username = $"User %i{n}"
                 }
         |]
         |> setEntries
     )
 
     let export() = 
-        printfn "Exporting...
+        printfn "Exporting..."
 
     Ctrls.container [
         h4 [] [str "Hours Worked"]
@@ -176,3 +177,7 @@ let Page (company: Company) =
     ]
 
 ```
+
+## Optional Parameters
+* `margin` allows you to specify a margin (in pixels) above and below the visible screen that will extend the "visible" region.
+* `dependencies` allows you to pass in an `obj[]` of dependencies that will trigger `useIsVisible` to refresh if any of the dependency values change.
